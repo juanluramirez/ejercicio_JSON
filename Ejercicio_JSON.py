@@ -15,3 +15,10 @@ for comercios in raiz:
 
 print "Hay un total de",len(raiz),"comercios registrados."
 
+#3)Introducir por teclado una cadena por la cual comienza la direccion por ejemplo: Al introducir calle, no aparecera el nombre del comercio y la calle donde se encuentra.
+
+via=raw_input("Dime el inicio de la via: ")
+
+for calles in raiz:
+	if calles["ayto:direccion"].startswith(via.title()):
+		print "El comercio es",calles["dc:name"],"y se encuentra en",calles["ayto:direccion"]
