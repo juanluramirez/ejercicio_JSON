@@ -32,3 +32,13 @@ for codigos in raiz:
 		print "El comercio es",codigos["dc:name"],"y se encuentra en",codigos["ayto:direccion"]
 	elif codigos["ayto:idPuesto"]==id_comercio:
 		print "El puesto es",codigos["dc:name"],"y se encuentra en",codigos["ayto:direccion"]
+
+#5)Obtendremos una lista de los negocios con su ubicacion en "openstreetmaps".
+
+id_comercio=raw_input("Dime el id del comercio o del puesto: ")
+
+for ubicacion in raiz:
+	if ubicacion["ayto:codigo"]==id_comercio:
+		latitud=ubicacion["ayto:latitud"]
+		longitud=ubicacion["ayto:longitud"]
+		print "El comercio es",ubicacion["dc:name"],"y su ubicacion en openstreetmap es:","http://www.openstreetmap.org/#map=25/"+latitud+"/"+longitud
