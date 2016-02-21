@@ -22,3 +22,13 @@ via=raw_input("Dime el inicio de la via: ")
 for calles in raiz:
 	if calles["ayto:direccion"].startswith(via.title()):
 		print "El comercio es",calles["dc:name"],"y se encuentra en",calles["ayto:direccion"]
+
+#4)Introducir el codigo o el idPuesto por teclado y nos mostrara el nombre del comercio y la calle.
+
+id_comercio=raw_input("Dime el id del comercio o del puesto: ")
+
+for codigos in raiz:
+	if codigos["ayto:codigo"]==id_comercio:
+		print "El comercio es",codigos["dc:name"],"y se encuentra en",codigos["ayto:direccion"]
+	elif codigos["ayto:idPuesto"]==id_comercio:
+		print "El puesto es",codigos["dc:name"],"y se encuentra en",codigos["ayto:direccion"]
