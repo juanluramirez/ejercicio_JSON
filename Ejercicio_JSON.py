@@ -45,6 +45,9 @@ for ubicacion in raiz:
 
 #6)Genera un fichero html, con los datos de todos loc comercios que tienen pagina web, con la siguiente estructura:
 
+fichero_html="index.html"
+fichero=open(fichero_html,"w")
+
 for web in raiz:
 	if web["ayto:web"]!="":
 		fichero.write("<h1>"+web["dc:name"]+"</h1>"+"\n")
