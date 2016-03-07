@@ -52,4 +52,4 @@ for web in raiz:
 	if web["ayto:web"]!="":
 		fichero.write("<h1>"+web["dc:name"].encode("utf-8")+"</h1>"+"\n")
 		fichero.write("<p>"+web["dc:description"].encode("utf-8")+"</p>"+"\n")
-		fichero.write('<a href="'+web["ayto:web"].encode("utf-8")+'">Más Informacion</a>')
+		fichero.write('<a href="http://'+web["ayto:web"].encode("utf-8")+'">Más Informacion</a>')
