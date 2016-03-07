@@ -42,3 +42,11 @@ for ubicacion in raiz:
 		latitud=ubicacion["ayto:latitud"]
 		longitud=ubicacion["ayto:longitud"]
 		print "El comercio es",ubicacion["dc:name"],"y su ubicacion en openstreetmap es:","http://www.openstreetmap.org/#map=25/"+latitud+"/"+longitud
+
+#6)Genera un fichero html, con los datos de todos loc comercios que tienen pagina web, con la siguiente estructura:
+
+for web in raiz:
+	if web["ayto:web"]!="":
+		fichero.write("<h1>"+web["dc:name"]+"</h1>"+"\n")
+		fichero.write("<p>"+web["dc:description"]+"</p>"+"\n")
+		fichero.write('<img src="'+dias.find("image").text+'"/>')
