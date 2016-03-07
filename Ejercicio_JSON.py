@@ -49,4 +49,4 @@ for web in raiz:
 	if web["ayto:web"]!="":
 		fichero.write("<h1>"+web["dc:name"]+"</h1>"+"\n")
 		fichero.write("<p>"+web["dc:description"]+"</p>"+"\n")
-		fichero.write('<img src="'+dias.find("image").text+'"/>')
+		fichero.write('a href="'+web["ayto:web"]+'">Más Informacion</a>')
